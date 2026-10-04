@@ -3,9 +3,9 @@ import { experience, skills, faqs } from "@/data/site";
 
 export default function Resume() {
   return (
-    <section id="resume" className="scroll-mt-14 bg-cream-2 px-5 py-16 md:px-[4.5%] md:py-20">
+    <section id="resume" className="scroll-mt-24 bg-cream-2 px-5 py-16 md:px-[4.5%] md:py-20">
       <div className="flex items-end justify-between">
-        <Reveal as="h2" className="font-head text-5xl font-bold uppercase leading-none md:text-7xl"><sup className="mr-3 align-baseline font-mono text-[11px] font-normal">(04)</sup>Resume</Reveal>
+        <Reveal as="h2" className="font-head text-5xl font-bold uppercase leading-none md:text-7xl"><sup className="mr-3 align-baseline font-mono text-[11px] font-normal">(05)</sup>Resume</Reveal>
         <a href="/Marvin-Asamoah-Resume.pdf" className="rounded-full border-2 border-ink bg-lime px-4 py-1.5 text-[11px] font-bold uppercase tracking-wider transition hover:bg-ink hover:text-lime">Download CV ↓</a>
       </div>
       <Reveal variant="draw" className="dash mt-5" />

@@ -8,7 +8,7 @@ const rows = [
 
 export default function BeforeAfter() {
   return (
-    <section id="before-after" className="scroll-mt-14 bg-cream-2 px-5 py-16 md:px-[4.5%] md:py-20">
+    <section id="before-after" className="scroll-mt-24 bg-cream-2 px-5 py-16 md:px-[4.5%] md:py-20">
       <Reveal as="h2" className="font-hero text-[clamp(3.5rem,13vw,12rem)] uppercase leading-[0.9]">
         Before <span className="mx-2 inline-block h-[0.55em] w-[0.55em] translate-y-[0.04em] rounded-full border-[6px] border-ink bg-lime align-middle" /> After
       </Reveal>

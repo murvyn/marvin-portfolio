@@ -3,7 +3,7 @@ import { me } from "@/data/site";
 
 export default function Contact() {
   return (
-    <section id="contact" className="scroll-mt-14 bg-ink px-5 pb-8 pt-16 text-cream md:px-[4.5%] md:pt-24">
+    <section id="contact" className="scroll-mt-24 bg-ink px-5 pb-8 pt-16 text-cream md:px-[4.5%] md:pt-24">
       <Reveal as="p" className="text-[11px] uppercase tracking-wider text-cream/50">{"// got a project? a bug? doubts?"}</Reveal>
       <Reveal delay={150} className="mt-6"><a href={me.whatsapp} target="_blank" rel="noreferrer" className="group flex items-center gap-6 font-hero uppercase leading-none text-lime text-[clamp(4rem,15vw,14rem)]">
         Write me <span className="nudge">→</span>

@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Manifesto from "@/components/Manifesto";
 import Stack from "@/components/Stack";
 import BeforeAfter from "@/components/BeforeAfter";
+import Clients from "@/components/Clients";
 import Work from "@/components/Work";
 import Process from "@/components/Process";
 import Resume from "@/components/Resume";
@@ -16,11 +17,12 @@ export default function Home() {
       <Cursor />
       <Marquee />
       <Header />
-      <main>
+      <main className="overflow-x-clip">
         <Hero />
         <Manifesto />
         <Stack />
         <BeforeAfter />
+        <Clients />
         <Work />
         <Process />
         <Resume />

@@ -3,9 +3,9 @@ import { process } from "@/data/site";
 
 export default function Process() {
   return (
-    <section id="process" className="scroll-mt-14 px-5 py-16 md:px-[4.5%] md:py-20">
+    <section id="process" className="scroll-mt-24 px-5 py-16 md:px-[4.5%] md:py-20">
       <div className="flex items-end justify-between">
-        <Reveal as="h2" className="font-head text-5xl font-bold uppercase leading-none md:text-7xl"><sup className="mr-3 align-baseline font-mono text-[11px] font-normal">(03)</sup>How the work goes</Reveal>
+        <Reveal as="h2" className="font-head text-5xl font-bold uppercase leading-none md:text-7xl"><sup className="mr-3 align-baseline font-mono text-[11px] font-normal">(04)</sup>How the work goes</Reveal>
         <span className="hidden text-[10px] uppercase tracking-wider text-grey md:block">{"// 4 steps, no magic"}</span>
       </div>
       <Reveal variant="draw" className="dash mt-5" />

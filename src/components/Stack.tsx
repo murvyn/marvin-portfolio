@@ -8,7 +8,7 @@ const rows = [
 
 export default function Stack() {
   return (
-    <section id="stack" className="scroll-mt-14 px-5 py-16 md:px-[4.5%] md:py-20">
+    <section id="stack" className="scroll-mt-24 px-5 py-16 md:px-[4.5%] md:py-20">
       <div className="flex items-end justify-between">
         <Reveal as="h2" className="font-head text-5xl font-bold uppercase leading-none md:text-7xl"><sup className="mr-3 align-baseline font-mono text-[11px] font-normal">(01)</sup>What I work with</Reveal>
         <span className="hidden text-[10px] uppercase tracking-wider text-grey md:block">{"// languages & tools"}</span>

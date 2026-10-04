@@ -33,17 +33,18 @@ export const services = [
   },
 ];
 
-export type Project = {
+export type Product = {
   title: string;
   kind: string;
   blurb: string;
   built: string[];
   stack: string[];
   status?: string;
-  link?: string;
+  url?: string;
+  cta?: string;
 };
 
-export const featured: Project[] = [
+export const products: Product[] = [
   {
     title: "Susu Party",
     kind: "Fintech product · Ghana",
@@ -58,6 +59,33 @@ export const featured: Project[] = [
     status: "In progress",
   },
   {
+    title: "The Quiet Time",
+    kind: "Habit app · iOS & Android",
+    blurb:
+      "A daily-devotional habit app. At a set time it takes over the phone, blocking other apps and bypassing silent mode, until you finish a 9-step session.",
+    built: [
+      "Two fully independent native apps built from one spec",
+      "Native iOS in SwiftUI and SwiftData, plus a native Android app",
+      "Scheduled device takeover with scripture-memorisation recall",
+    ],
+    stack: ["SwiftUI", "SwiftData", "Android"],
+    status: "In progress",
+  },
+  {
+    title: "HSK4 Companion",
+    kind: "Education app · Chinese exam prep",
+    blurb:
+      "A study app for the HSK 4 Chinese exam: spaced-repetition vocabulary, listening, reading, writing and full mock papers, with AI grading of your answers.",
+    built: [
+      "1,000-word flashcards and 19 full-length mock exams",
+      "AI grading and progress insights powered by Claude",
+      "Installable offline PWA with optional cross-device sync",
+    ],
+    stack: ["Next.js", "Supabase", "Claude API", "PWA"],
+    url: "https://hsk-4-seven.vercel.app",
+    cta: "Open app",
+  },
+  {
     title: "Relay",
     kind: "SaaS · WhatsApp commerce",
     blurb:
@@ -68,6 +96,8 @@ export const featured: Project[] = [
       "NestJS backend with a CI-gated test suite",
     ],
     stack: ["Next.js", "NestJS", "WhatsApp API", "AI"],
+    url: "https://www.getrelaytech.com",
+    cta: "Visit site",
   },
   {
     title: "SchoolBridge",
@@ -92,41 +122,116 @@ export const featured: Project[] = [
       "Mobile companion app",
     ],
     stack: ["NestJS", "Next.js", "React Native", "WebSockets"],
-  },
-  {
-    title: "First Love Church platforms",
-    kind: "Client · Church network",
-    blurb:
-      "Internal tools for a network of affiliated churches: oversight from denomination to pastor, a pastors directory, and data collection for Qodesh.",
-    built: [
-      "Denomination, bishop, church and pastor hierarchy",
-      "Multi-role access scoped to each leader's reach",
-      "Pastors directory on a GraphQL API",
-    ],
-    stack: ["NestJS", "Next.js", "GraphQL", "MongoDB"],
-  },
-  {
-    title: "Collabo",
-    kind: "Client · Group savings app",
-    blurb:
-      "Users create groups and raise money through contribution campaigns with targets and due dates.",
-    built: [
-      "Worked on the Android and React Native (Expo) apps",
-      "Contribution campaigns with currencies and deadlines",
-    ],
-    stack: ["Android", "React Native", "Expo"],
+    url: "https://trade-iq-web.vercel.app",
+    cta: "Open app",
   },
 ];
 
-export const sites = [
-  { name: "Amegah", note: "Portfolio for a director and cinematographer, edited by the client in Sanity", stack: "Next.js · Sanity" },
-  { name: "BNG Foods & Supplies", note: "Marketing site for a frozen-foods importer", stack: "Next.js" },
-  { name: "Surge DH", note: "Multi-page company website", stack: "Next.js" },
-  { name: "TransGhana Bookstore", note: "Second-hand bookshop storefront, pay on delivery", stack: "Next.js" },
-  { name: "J2 Healthcare", note: "Behavioral health practice: services, insurance, booking", stack: "Next.js" },
-  { name: "Rapha Home Health Care", note: "Home health care services website", stack: "Next.js · Tailwind" },
-  { name: "Real Estate Listings", note: "Property listings with an owner-only admin", stack: "Next.js · Postgres · Clerk" },
-  { name: "First Step", note: "Services, story, FAQ and blog site", stack: "Next.js" },
+export type Client = {
+  name: string;
+  kind: string;
+  blurb: string;
+  stack: string[];
+  url?: string;
+  cta?: string;
+  extra?: { label: string; url: string }[]; // more buttons, e.g. a second app store
+};
+
+// url = the client's main (custom) domain, verified live. Leave it out when there is no public link.
+export const clients: Client[] = [
+  {
+    name: "Qodesh Data Collection",
+    kind: "Church data platform · Ghana",
+    blurb: "Data collection, reporting and analytics for The Qodesh: members and weekly services across a full ministry hierarchy, with access scoped to each leader's reach.",
+    stack: ["NestJS", "Next.js"],
+    url: "https://data.theqodesh.com",
+    cta: "Open app",
+  },
+  {
+    name: "CWM",
+    kind: "Missions finance · First Love",
+    blurb: "Seed (contribution) tracking for First Love's network of churches, organised as denomination, bishop, church and pastor.",
+    stack: ["NestJS", "Next.js"],
+    url: "https://cwm-frontend.vercel.app",
+    cta: "Open app",
+  },
+  {
+    name: "First Love Pastors Directory",
+    kind: "Directory · First Love",
+    blurb: "A directory of First Love pastors and their churches, with a Next.js front end and a GraphQL API.",
+    stack: ["Next.js", "NestJS", "GraphQL", "MongoDB"],
+  },
+  {
+    name: "FCBPI",
+    kind: "Fellowship website · Accra",
+    blurb: "Home of the Fellowship of Christian Business People & Professionals International, under Qodesh City Church.",
+    stack: ["Next.js", "Tailwind", "shadcn/ui"],
+    url: "https://qodeshfcbpi.org",
+  },
+  {
+    name: "Collabo",
+    kind: "Group savings app",
+    blurb: "Users create groups and raise money through contribution campaigns with targets and due dates. I worked on the Android and React Native apps.",
+    stack: ["Android", "React Native", "Expo"],
+    url: "https://play.google.com/store/apps/details?id=com.groupcollabo.android",
+    cta: "Google Play",
+    extra: [{ label: "App Store", url: "https://apps.apple.com/app/collabo-for-groups/id6504736129" }],
+  },
+  {
+    name: "Amegah",
+    kind: "Portfolio site · Film & photography",
+    blurb: "A portfolio for a director, cinematographer and photographer, edited by the client in Sanity with no developer needed.",
+    stack: ["Next.js", "Sanity"],
+    url: "https://www.amegah.co",
+  },
+  {
+    name: "BNG Foods & Supplies",
+    kind: "Company website · Ghana",
+    blurb: "Marketing site for a frozen chicken and beef importer that supplies Ghana from Brazil, with product pages and a contact page.",
+    stack: ["Next.js"],
+    url: "https://www.bngfoods.com",
+  },
+  {
+    name: "Surge DH",
+    kind: "Company website · Ghana",
+    blurb: "Website for a Category D certified civil engineering contractor and medical & general supplies partner.",
+    stack: ["Next.js"],
+    url: "https://surgedh.vercel.app",
+  },
+  {
+    name: "J2 Healthcare",
+    kind: "Healthcare website · Ohio, USA",
+    blurb: "Site for a psychiatric and mental health practice: services, conditions, insurance, booking and a patient centre.",
+    stack: ["Next.js"],
+    url: "https://www.j2healthcare.com",
+  },
+  {
+    name: "Rapha Home Health Care",
+    kind: "Healthcare website · Ohio, USA",
+    blurb: "Website for a home health care provider offering skilled nursing, aide and therapy services.",
+    stack: ["Next.js", "Tailwind"],
+    url: "https://www.raphahhc.com",
+  },
+  {
+    name: "First Step Home Health Care",
+    kind: "Healthcare website · Ohio, USA",
+    blurb: "Website for a DODD-certified nursing provider for people with developmental disabilities.",
+    stack: ["Next.js"],
+    url: "https://www.firststephomehealth.com",
+  },
+  {
+    name: "Real Estate Listings",
+    kind: "Property platform",
+    blurb: "A property listings site with an owner-only admin area, cached public reads and unit tests.",
+    stack: ["Next.js", "Neon Postgres", "Clerk"],
+  },
+  {
+    name: "Booksopia",
+    kind: "E-commerce · Ghana",
+    blurb: "Ghana's home for pre-loved books: an online bookshop where readers buy second-hand books and sellers can list with the shop.",
+    stack: ["WordPress", "WooCommerce"],
+    url: "https://booksopia.com",
+  },
 ];
 
 export const experience = [

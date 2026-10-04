@@ -56,13 +56,14 @@ body {
 .rv-right { transform: translateX(90px); }
 .rv-wipe { opacity: 1; clip-path: inset(0 100% 0 0); }
 .rv-draw { opacity: 1; transform: scaleX(0); transform-origin: left; transition-duration: 1.1s; }
-.rv.in { opacity: 1; transform: none; clip-path: inset(0 0 0 0); }
+.rv.in { opacity: 1; transform: none; }
+.rv-wipe.in { clip-path: inset(-1em); }
 
 /* hero load-in */
 @keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
 @keyframes pop-in { from { opacity: 0; transform: scale(.2) rotate(-120deg); } to { opacity: 1; transform: none; } }
 @keyframes fade-up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
-.hero-line { display: block; overflow: hidden; padding: .07em 0; margin: -.07em 0; }
+.hero-line { display: block; overflow: hidden; padding-block: .07em; margin-block: -.07em; }
 .hero-line > span { display: block; animation: rise 1.1s cubic-bezier(.2,.8,.2,1) both; animation-delay: var(--d, 0ms); }
 .pop-in { animation: pop-in 1s cubic-bezier(.3,1.4,.4,1) .85s both; }
 .fade-up { animation: fade-up .9s cubic-bezier(.2,.7,.2,1) both; animation-delay: var(--d, 0ms); }
