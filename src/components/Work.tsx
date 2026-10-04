@@ -92,9 +92,11 @@ export default function Work() {
       </div>
 
       <div className="mt-5 flex items-center justify-between">
-        <div className="flex items-center gap-2">
+        <div className="-ml-1.5 flex items-center">
           {products.map((p, n) => (
-            <button key={p.title} aria-label={`Go to ${p.title}`} onClick={() => go(n)} className={`h-3 w-3 rounded-full border-2 border-ink transition ${i === n ? "bg-ink" : ""}`} />
+            <button key={p.title} aria-label={`Go to ${p.title}`} onClick={() => go(n)} className="grid h-6 w-6 place-items-center">
+              <span className={`h-3 w-3 rounded-full border-2 border-ink transition ${i === n ? "bg-ink" : ""}`} />
+            </button>
           ))}
         </div>
         <div className="flex gap-2">

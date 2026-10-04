@@ -292,6 +292,11 @@ export const process = [
 ];
 
 export const faqs = [
+  { q: "Who is Marvin Asamoah?", a: "Marvin Asamoah is a full-stack developer and QA engineer based in Accra, Ghana. He builds websites, web apps and mobile apps with React, Next.js, Node.js, NestJS and React Native, and tests them with Playwright, Appium and Lighthouse. He holds a BSc in Computer Science from the University of Energy and Natural Resources." },
+  { q: "Is Marvin Asamoah available for freelance work?", a: "Yes. Marvin takes freelance projects from businesses, founders and individuals, and is also open to full-time roles. The fastest way to start is a WhatsApp message or an email." },
+  { q: "What kinds of projects does Marvin build?", a: "Business websites and landing pages, web apps and dashboards with logins, roles and payments, cross-platform mobile apps, and automated QA and performance testing. Recent work includes church platforms, healthcare websites, a WhatsApp commerce SaaS and a Chinese exam-prep app." },
+  { q: "Where is Marvin based, and does he work remotely?", a: "Marvin is based in Accra, Ghana (GMT) and works remotely with clients in Ghana, the United States and elsewhere." },
+  { q: "What technologies does Marvin use?", a: "Frontend: React, Next.js, TypeScript, Tailwind CSS. Backend: Node.js, NestJS, Express, PostgreSQL, MongoDB, Redis, Prisma. Mobile: React Native and Expo. Testing: Playwright, Appium and Lighthouse." },
   { q: "How much does a website or app cost?", a: "It depends on what you need. After a short call I send a fixed quote for the agreed scope, so you know the price before any work starts." },
   { q: "How long will it take?", a: "A business website usually takes a few weeks. Web and mobile apps take longer depending on features. You get a timeline in the quote." },
   { q: "I'm not technical. Is that a problem?", a: "No. I explain things in plain language, and you only make the decisions that matter to your business." },

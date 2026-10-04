@@ -25,3 +25,14 @@ Single-page personal portfolio for Marvin Asamoah (Next.js 16 App Router, React 
 - Motion: `Reveal.tsx` adds an `in` class when an element scrolls into view, and CSS does the rest (variants `up`, `pop`, `left`, `right`, `wipe`, `draw`). `wipe` observes its parent, because a fully clipped element never reports as visible. Hero load-in is pure CSS. Everything is disabled under `prefers-reduced-motion`.
 - `Work.tsx` is a horizontal scroller with arrow buttons and mouse drag-to-scroll. Its vertical padding stops the hover lift from being clipped, so keep it.
 - The resume PDF is `public/Marvin-Asamoah-Resume.pdf`, linked from the Hero and Resume sections.
+
+## SEO / AI-search layer
+
+The canonical, permanent address is `https://marvin.getrelaytech.com` (`SITE_URL` in `src/lib/seo.ts`). Do not change it casually: the canonical tag, sitemap, structured data, llms.txt and Open Graph URLs all derive from it.
+
+- `src/lib/seo.ts` builds everything from `src/data/site.ts`: the JSON-LD graph (WebSite, Person, ProfessionalService, ItemList of work, FAQPage) and the text of `llms.txt` / `llms-full.txt`. Edit the data, not the output, so they never drift apart. FAQPage markup must match the FAQ visible on the page, and it does because both read `faqs`.
+- `src/app/layout.tsx` holds the metadata (title, description, keywords, canonical, Open Graph, Twitter, robots) and viewport. `src/app/page.tsx` injects the JSON-LD.
+- `robots.ts` allows all crawlers, including named AI crawlers. `sitemap.ts` lists the single page. `llms.txt/` and `llms-full.txt/` are static route handlers; llms.txt must contain Markdown links or Lighthouse's agentic check fails.
+- `opengraph-image.tsx`, `icon.tsx` and `apple-icon.tsx` render with `next/og` using `assets/Anton-Regular.ttf`. `src/app/favicon.ico` was generated from the same "M" icon.
+- `next.config.ts` redirects the old `portfolio-eight-peach-33.vercel.app` host to the canonical domain so there is no duplicate content.
+- Last audit: Lighthouse 100 for SEO, Accessibility, Best Practices and Agentic Browsing on desktop and mobile. Keep interactive targets at least 24px (the carousel dots are 24px buttons around 12px dots).

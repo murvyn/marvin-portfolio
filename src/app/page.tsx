@@ -10,10 +10,12 @@ import Work from "@/components/Work";
 import Process from "@/components/Process";
 import Resume from "@/components/Resume";
 import Contact from "@/components/Contact";
+import { jsonLd } from "@/lib/seo";
 
 export default function Home() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <Cursor />
       <Marquee />
       <Header />

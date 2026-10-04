@@ -20,8 +20,8 @@ export default function Hero() {
       </div>
 
       <p className="fade-up relative z-10 mt-8 max-w-xl text-sm leading-relaxed text-grey md:mt-6" style={{ "--d": "900ms" } as React.CSSProperties}>
-        Full-stack developer &amp; QA engineer. I turn your idea into a website, web app or mobile app that works, and I test it before you
-        launch. For business owners, founders and teams.
+        Freelance full-stack developer &amp; QA engineer in Accra, Ghana. I turn your idea into a website, web app or mobile app that works,
+        and I test it before you launch. For business owners, founders and teams, in Ghana and worldwide.
       </p>
 
       <div className="fade-up relative z-10 mt-6 flex flex-wrap gap-3" style={{ "--d": "1050ms" } as React.CSSProperties}>

@@ -40,7 +40,7 @@ export default function Resume() {
         ))}
       </div>
 
-      <Reveal as="h3" className="mt-16 font-head text-4xl font-bold uppercase">Questions clients ask first</Reveal>
+      <Reveal as="h3" className="mt-16 font-head text-4xl font-bold uppercase">Questions people ask</Reveal>
       <div className="mt-4 border-t-2 border-ink">
         {faqs.map((f) => (
           <details key={f.q} className="group border-b-2 border-ink py-4">
