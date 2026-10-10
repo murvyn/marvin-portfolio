@@ -25,7 +25,7 @@ export default function Resume() {
         <Reveal as="li" className="grid gap-3 py-7 md:grid-cols-[200px_1fr] md:gap-8">
           <p className="text-[11px] font-bold uppercase tracking-wider text-grey">2020 — 2024</p>
           <div>
-            <h3 className="font-head text-3xl font-semibold uppercase leading-tight">BSc Computer Science <span className="text-grey">· University of Energy and Natural Resources</span></h3>
+            <h3 className="font-head text-3xl font-semibold uppercase leading-tight">BSc Computer Engineering <span className="text-grey">· University of Energy and Natural Resources</span></h3>
             <p className="mt-3 text-xs text-grey">Software engineering, algorithms, operating systems, secure networks, AI and project management.</p>
           </div>
         </Reveal>
